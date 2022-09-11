@@ -1,0 +1,42 @@
+DELETE  http://localhost:3700/blog/6319c9771260402e6f04f7a1
+
+###
+POST http://localhost:3700/blog HTTP/1.1
+content-type: application/json
+
+{
+    "title": "my title",
+    "text" : "my Text",
+    "author": "Erfan Yousefi"
+}
+###
+Get http://localhost:3700/blog/6319c9771260402e6f04f7a1 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "my title",
+    "text" : "my Text",
+    "author": "Erfan Yousefi"
+}
+###
+GET http://localhost:3700/blog HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaXJlemEiLCJpZCI6IjYzMTlkOGYxOTY5OTA5MmQyNTEwNDBlOCIsImlhdCI6MTY2MjYzODMyNiwiZXhwIjoxNjY0Mzg3MzY0OTE2fQ.4H9YFhtYtZimt9J327HazTLnlJhOJUIDhly6tgUmukQ
+
+###
+POST http://localhost:3700/auth/register
+content-type: application/json
+
+{
+    "username": "alireza",
+    "password": "1111",
+    "fullname": "alireza assss"
+}
+###
+POST http://localhost:3700/auth/login
+content-type: application/json
+
+{
+    "username": "alireza",
+    "password": "1111"
+}
+
