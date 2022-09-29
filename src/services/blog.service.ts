@@ -18,6 +18,8 @@ export class BlogService {
     }
     async fetchByID(blogId: BlogIdDto): Promise<FindDoc<IBlog>>{
         const blog: FindDoc<IBlog> = await BlogModel.findById(blogId.id)
+        console.log(blog);
+        
         if(!blog) throw {status: 404, message: "notFound Blog"}
         return blog
     }

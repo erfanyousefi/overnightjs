@@ -56,7 +56,7 @@ export class BlogController {
             next(error)
         }
     }
-    @Delete("/delete/:id")
+    @Delete("delete/:id")
     async RemoveBlogByID(req: Request, res: Response, next: NextFunction) {
         try {
             const blogDto: BlogIdDto = plainToClass(BlogIdDto, req.params)
